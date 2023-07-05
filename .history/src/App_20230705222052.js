@@ -29,23 +29,25 @@ const App = () => {
   };
 
   return (
-    <main>
-      {showOrderTable && <OrderTable />}
-      <section className="menu section">
-        <div className="title">
-          <img src={logo} alt="logo" className="logo" />
-          <h2>Menu List</h2>
-          <div className="underline"></div>
-        </div>
-        <button onClick={handleYourKartClick}>YourKart</button>
-        <Categories
-          categories={categories}
-          activeCategory={activeCategory}
-          filterItems={filterItems}
-        />
-        <Menu items={menuItems} />
-      </section>
-    </main>
+    <Router>
+      <main>
+        {showOrderTable && <OrderTable />}
+        <section className="menu section">
+          <div className="title">
+            <img src={logo} alt="logo" className="logo" />
+            <h2>Menu List</h2>
+            <div className="underline"></div>
+          </div>
+          <button onClick={handleYourKartClick}>YourKart</button>
+          <Categories
+            categories={categories}
+            activeCategory={activeCategory}
+            filterItems={filterItems}
+          />
+          <Menu items={menuItems} />
+        </section>
+      </main>
+    </Router>
   );
 };
 

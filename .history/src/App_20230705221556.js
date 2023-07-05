@@ -4,7 +4,6 @@ import Categories from "./Categories";
 import items from "./data";
 import logo from "./logo.JPG";
 import OrderTable from "./OrderTable";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 const allCategories = ["all", ...new Set(items.map((item) => item.category))];
 
@@ -37,13 +36,14 @@ const App = () => {
           <h2>Menu List</h2>
           <div className="underline"></div>
         </div>
-        <button onClick={handleYourKartClick}>YourKart</button>
+
         <Categories
           categories={categories}
           activeCategory={activeCategory}
           filterItems={filterItems}
         />
         <Menu items={menuItems} />
+        <button onClick={handleYourKartClick}>YourKart</button>
       </section>
     </main>
   );

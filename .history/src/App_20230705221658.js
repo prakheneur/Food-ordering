@@ -4,7 +4,6 @@ import Categories from "./Categories";
 import items from "./data";
 import logo from "./logo.JPG";
 import OrderTable from "./OrderTable";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 const allCategories = ["all", ...new Set(items.map((item) => item.category))];
 
