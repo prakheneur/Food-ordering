@@ -3,10 +3,14 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import { SuiDevnetChain, WalletProvider } from "@suiet/wallet-kit";
+import "@suiet/wallet-kit/style.css";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <WalletProvider chains={[SuiDevnetChain]}>
+      <App />
+    </WalletProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

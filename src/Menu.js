@@ -1,6 +1,6 @@
 import React from "react";
 
-const Menu = ({ items }) => {
+const Menu = ({ items, onClick }) => {
   return (
     <div className="section-center">
       {items.map((item) => {
@@ -12,7 +12,7 @@ const Menu = ({ items }) => {
               <header>
                 <h4>{title}</h4>
                 <h4 className="price">
-                  ${price} <button>Buy now</button>
+                  {price} SUI<button onClick={() => onClick(title)}>Buy now</button>
                 </h4>
               </header>
               <p className="item-text">{desc}</p>
